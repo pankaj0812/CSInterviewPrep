@@ -1,5 +1,4 @@
-// Java program to demonstrate difference between String,
-// StringBuilder and StringBuffer
+
 
 import java.util.*;
 class csInterview
