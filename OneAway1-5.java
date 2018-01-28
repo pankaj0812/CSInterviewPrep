@@ -1,12 +1,10 @@
-/*package whatever //do not write package name here */
-/* condition for pales pale */
 import java.io.*;
 
 class GFG {
 	public static void main (String[] args)
 	{
 	    boolean value;
-		String s1="pale",s2="ple";
+		String s1="pale",s2="bake";
 		s1 = s1.toLowerCase();s2 = s2.toLowerCase();
 		if (s1.equals(s2))
 		{
@@ -54,22 +52,21 @@ class GFG {
         sb1.append(s1);
         StringBuilder sb2 = new StringBuilder();
         sb2.append(s2);
-        //int len1=s1.length();int len2=s2.length();
         int len=s1.length();
-        for (int i=0;i<len;i++)
+        for (int i=0;i<len-1;i++)
         {
-            if (sb1.charAt(i) != sb2.charAt(i) && count<1) 
+            if (i<sb2.length()-1)
+            {
+                if (sb1.charAt(i) != sb2.charAt(i) && count<1) 
+                    {
+                        sb2.insert(i, sb1.charAt(i));
+                        count++;
+                     }
+            }
+            else if (i==sb2.length()-1)
                 {
-                    //System.out.println(sb1.charAt(i));
-                    //System.out.println(sb2.charAt(i));
-                    
-                    sb2.insert(i, sb1.charAt(i));
-                    count++;
-                    //System.out.println(sb1.charAt(i));
-                    //System.out.println(sb2.charAt(i));
-                    
-                 }
-                 
+                    sb2.append(sb1.charAt(i+1));
+                }
         }
         if (sb1.toString().equals(sb2.toString()))
         return true;
