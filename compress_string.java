@@ -1,10 +1,9 @@
-
 import java.io.*;
 import java.util.*;
 
 class GFG {
   public static void main(String[] args) throws Exception  {
-    String s = "aabbccaa";
+    String s = "aaabbbccaa";
     System.out.println(getCompressedString(s));
         
     }
@@ -31,15 +30,17 @@ class GFG {
             last = s.charAt(i);
             //System.out.println(count + "2 last :" + last + " char :" + s.charAt(i)+"\n");
         }
-        System.out.println(count + " last :" + last + " char :" + s.charAt(i)+"\n");
+       // System.out.println(count + " last :" + last + " char :" + s.charAt(i)+"\n");
         if(i==s.length()-1)
             compStr.append(""+count+last);
         if(s.length()==compStr.length())
                    return s;
 
-        System.out.println("compressed "+compStr+"\n");
-        return compStr;
+      
      
     }
+      System.out.println("compressed "+compStr+"\n");
+        return compStr.toString();
 
+}
 }
