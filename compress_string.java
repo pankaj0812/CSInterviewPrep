@@ -18,14 +18,14 @@ class GFG {
             count++;
         }else if(s.charAt(i)!=last){
             if(count>1)
-                 compStr.append(""+count+last);
+                 compStr.append(""+last+count);
             else
                 compStr.append(""+last);
             count = 1;
             last = s.charAt(i);
         }
         if(i==s.length()-1)
-            compStr.append(""+count+last);
+            compStr.append(""+last+count);
         if(s.length()==compStr.length())
                    return s;  
     }
