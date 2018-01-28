@@ -19,7 +19,7 @@ class GFG {
                // System.out.println(i);
                     if(s1.length()<s2.length())
                         return s1.substring(i).equals(s2.substring(i+1));
-                    else if(s1.length()<s2.length())
+                    else if(s1.length()>s2.length())
                          return s2.substring(i).equals(s1.substring(i+1));
                  }
             }
